@@ -17,3 +17,7 @@ for (var i = 0; i < 63; i++) {
   block.style.float = 'left';
   document.body.appendChild(block);
 }
+
+setTimeout(function() {
+  window.location.reload(1);
+}, 2000);
