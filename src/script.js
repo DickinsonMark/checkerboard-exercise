@@ -1,21 +1,19 @@
-// Your JS goes here
-for (var i = 0; i < 81; i++) {
+/////////  Random Colors
 
-  var blockRed = document.createElement('div');
-  blockRed.style.backgroundColor = 'red';
-  blockRed.style.width = '11.1%';
-  blockRed.style.paddingBottom = '11.1%';
-  blockRed.style.float = 'left';
-
-  var blockBlack = document.createElement('div');
-  blockBlack.style.backgroundColor = 'black';
-  blockBlack.style.width = '11.1%';
-  blockBlack.style.paddingBottom = '11.1%';
-  blockBlack.style.float = 'left';
-
-  if (i % 2 === 0) {
-    document.body.appendChild(blockRed);
-  } else {
-    document.body.appendChild(blockBlack);
+function getRandomColor() {
+  var val = '0123456789abcdef'.split('');
+  var color = '#';
+  for (var j = 0; j < 6; j++) {
+    color += val[Math.floor(Math.random() * 16)];
   }
+  return color;
+}
+
+for (var i = 0; i < 63; i++) {
+  var block = document.createElement('div');
+  block.style.backgroundColor = getRandomColor();
+  block.style.width = '11.1%';
+  block.style.paddingBottom = '11.1%';
+  block.style.float = 'left';
+  document.body.appendChild(block);
 }
