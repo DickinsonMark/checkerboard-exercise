@@ -1,5 +1,6 @@
 /////////  Random Colors
-
+var sound = new Audio('http://8tracks.com/explore/trance/hot/2#')
+sound.play()
 function getRandomColor() {
   var val = '0123456789abcdef'.split('');
   var color = '#';
